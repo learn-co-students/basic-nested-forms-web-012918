@@ -3,7 +3,7 @@ class PeopleController < ApplicationController
     @person = Person.new
   end
 
-  def create    
+  def create
     Person.create(person_params)
     redirect_to people_path
   end
@@ -16,5 +16,8 @@ class PeopleController < ApplicationController
 
   def person_params
     params.require(:person).permit(:name)
+  end
+
+  def get_person
   end
 end
